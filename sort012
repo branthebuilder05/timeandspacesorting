@@ -1,0 +1,51 @@
+
+public class sort012
+{
+   
+    
+public static void partition012(int[] arr,int p,int l,int h){
+        int tracker1=l,tracker2=h,tracker=l;
+        while(tracker<tracker2){
+            if(arr[tracker]==0){
+                int temp=arr[tracker1];
+                arr[tracker1]=arr[tracker];
+                arr[tracker]=temp;
+                tracker1++;
+                tracker++;
+                System.out.println("in if");
+            }
+            else if(arr[tracker]==2){
+                int temp=arr[tracker2];
+                arr[tracker2]=arr[tracker];
+                arr[tracker]=temp;
+                tracker2--;
+                System.out.println("in else if");
+               
+            }
+            else {
+                tracker++;
+                System.out.println("in else");
+            }
+            
+            
+            
+        }
+       
+        
+    }
+
+
+
+  public static void main (String[]args)
+  {
+    int arr[] = { 2,1, 10,23,5, 1114, 78, 699, 224,14,8888 };
+      int arr1[] = {2,0,0,2,0,1,0,1,2,1,1,0,1,2,2,2,0,1,1,1,0 };
+      partition012(arr1,0,0,arr1.length-1);
+
+    
+  for (int ele:arr1)
+      System.out.print (ele + " ");
+
+
+  }
+}
